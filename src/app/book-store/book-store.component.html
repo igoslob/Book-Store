@@ -1,25 +1,34 @@
-  <div class="checkboxing_year">
-   <div class="checked">
-    <h2>Рік видання</h2>
-    <input type="checkbox" > 1971-1980 <br>
-    <input type="checkbox" > 1981-1990 <br>
-    <input type="checkbox" > 1991-2000 <br>
-    <input type="checkbox" > 2001-2010 <br>
-  </div>
-
-  <div class="checkboxing">
-    <h2>Видавництво</h2>
-    <input type="checkbox" ng-model="checkboxModel.value1" > Проствіта <br>
-    <input type="checkbox" > Ранок <br>
-    <input type="checkbox" > Поліграфіст<br>
-    <input type="checkbox" > BOOKSHEF<br>
-  </div>
-  </div>
+<div class="content_st">
+  
+  <!-- Search Field -->
+  <div>
   <div class="search">
-    <input  type="text" size="30" placeholder="Введіть назву книги?">
+    <input [(ngModel)]="searchText" placeholder="Введіть поле вибору?" class="filter-input">
+      <span class="filter-clear" *ngIf="searchText.length>0" (click)="clearFilter()"></span>
    </div>
+</div>
+  <!-- Clear Link -->
+  <div class="clear-selection" title="Click to Clear Selections" (click)="clearSelection()" *ngIf="selected_count">Зняти вибране</div>
+  
+  <!-- Game List -->
+  <div class="checkboxing_year">  
+  <ul class="books-list">
+    <li *ngFor="let g of books | filter : searchText" class="books-item"> 
+      <input (change)="getSelected()" type="checkbox"
+               name="books"
+               value="{{g.id}}"
+               [(ngModel)]="g.selected"/> 
+      <span class="books-text">{{g.name}}</span>
+    </li>
+  </ul>
+  </div>
+  <!-- Selected Games-->
+
+  <div class="selected-books" *ngFor="let s of selected_books" >
+    
   <div class="one">
-    <img class="book-img" src="../bookig.png" alt="logo">
+    <img class="book-img" src="./favicon.ico" alt="logo">
+    <div class="content-books">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis beatae neque sit, cum numquam nihil deleniti quas, earum ab debitis commodi quo, aperiam molestiae.</p>
     <div class="sylka">
     <a class="prewier" href="">Preview</a>
@@ -27,64 +36,23 @@
     <div class="rating_block">
         <input name="rating" value="5" id="rating_5" type="radio" />
         <label for="rating_5" class="label_rating"></label>
-
+      
         <input name="rating" value="4" id="rating_4" type="radio" />
         <label for="rating_4" class="label_rating"></label>
-
+      
         <input name="rating" value="3" id="rating_3" type="radio" />
         <label for="rating_3" class="label_rating"></label>
-
+      
         <input name="rating" value="2" id="rating_2" type="radio" />
         <label for="rating_2" class="label_rating"></label>
-
+      
         <input name="rating" value="1" id="rating_1" type="radio" />
         <label for="rating_1" class="label_rating"></label>
       </div>
-  </div>
-  <div class="book">
-      <img class="book-img" src="../bookig.png" alt="logo">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis beatae neque sit, cum numquam nihil deleniti quas, earum ab debitis commodi quo, aperiam molestiae.</p>
-      <div class="sylka">
-      <a class="prewier" href="">Preview</a>
-      <a href="">Order</a></div>
-      <div class="rating_block">
-          <input name="rating" value="5" id="rating_5" type="radio" />
-          <label for="rating_5" class="label_rating"></label>
-
-          <input name="rating" value="4" id="rating_4" type="radio" />
-          <label for="rating_4" class="label_rating"></label>
-
-          <input name="rating" value="3" id="rating_3" type="radio" />
-          <label for="rating_3" class="label_rating"></label>
-
-          <input name="rating" value="2" id="rating_2" type="radio" />
-          <label for="rating_2" class="label_rating"></label>
-
-          <input name="rating" value="1" id="rating_1" type="radio" />
-          <label for="rating_1" class="label_rating"></label>
-        </div>
     </div>
+  </div>
 
-  <div class="book">
-      <img class="book-img" src="../bookig.png" alt="logo">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis beatae neque sit, cum numquam nihil deleniti quas, earum ab debitis commodi quo, aperiam molestiae.</p>
-      <div class="sylka">
-      <a class="prewier" href="">Preview</a>
-      <a href="">Order</a></div>
-      <div class="rating_block">
-          <input name="rating" value="5" id="rating_5" type="radio" />
-          <label for="rating_5" class="label_rating"></label>
 
-          <input name="rating" value="4" id="rating_4" type="radio" />
-          <label for="rating_4" class="label_rating"></label>
-
-          <input name="rating" value="3" id="rating_3" type="radio" />
-          <label for="rating_3" class="label_rating"></label>
-
-          <input name="rating" value="2" id="rating_2" type="radio" />
-          <label for="rating_2" class="label_rating"></label>
-
-          <input name="rating" value="1" id="rating_1" type="radio" />
-          <label for="rating_1" class="label_rating"></label>
-        </div>
-      </div>
+</div>
+  
+</div>

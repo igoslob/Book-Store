@@ -1,111 +1,207 @@
-.content_st{
-    padding: 0 5%;
-}
+/* Styles go here */
 
-*{
-    margin: 0;
-    padding: 0;
-}
-h2{
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-.checkboxing_year{
-    padding-left:5%;
-    padding-top: 10%;
-    line-height: 2.5;
-    float: left;
-}
-p{
-    margin: 0;
-    padding: 0;
-}
 .search input{
-    display: block;
-    background: url('https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/000/220/original/search.png?1510300432') no-repeat 3px 1px;
-    background-size:auto 90%;
-    border: 1px;
-    padding: 5px 5px 5px 40px;
-    height: 15px;
+  display: block;
+  background: url('https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/000/220/original/search.png?1510300432') no-repeat 3px 1px;
+  background-size:auto 90%; 
+  border: 1px solid #000;
+  padding: 5px 5px 5px 40px;
+  height: 15px;
 margin-left: auto;
 margin-right: 7%;
 }
 .search{
 
-    padding-top: 3%;
+  padding-top: 3%;
+}
 
+body{
+    font-family: verdana;
+  }
+  
+  .filter-input{
+    font-size:15px;
+    padding:5px;
+    border-radius:3px;
+    border:2px solid #ccc;
+    margin-bottom:5px;
+    padding-right: 30px;
+  }
+  
+  .clear-selection {
+      font-size: 12px;
+      font-weight: bold;
+      padding-left: 5%;
+      padding-top:8%; 
+      color: red;
+      cursor: pointer;
+      position: absolute;
+  }
+  
+  li.books-item {
+      list-style: none;
+      font-size: 20px;
+      padding: 3px 0px;
+  }
+  li.books-item input{
+    height: 20px;
+      width: 20px;
+  }
+  
+  .books-text{
+    vertical-align:top;
+  }
+  
+
+  
+  .delete-books{
+      font-size: 13px;
+      padding: 3px 6px;
+      vertical-align:middle;
+      cursor:pointer;
+  }
+  .delete-books:hover{
+      background: #99ABC1;
+      padding: 3px 6px;
+      border-radius: 15px;
+  }
+  
+  .filter-wrap{
+    position:relative ;
+   
+  }
+  .checkboxing_year{
+    padding-left:5%;
+    line-height: 2.5;
+    float: left;
+}
+  
+  .filter-clear{
+      position: absolute;
+      margin-left: -24px;
+      margin-top: 11px;
+      cursor:pointer;
+  }
+
+
+  .content_st{
+      padding: 0 5%;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  .checkboxing_year{
+      padding-left:5%;
+      padding-top: 10%;
+      line-height: 2.5;
+      float: left;
+  }
+  p{
+      margin: 0;
+      padding: 0;
+  }
+  
+*{
+  margin: 0;
+  padding: 0;
+}
+.checkboxing_year{
+  padding-left:5%;
+  padding-top: 10%;
+  line-height: 2.5;
+  float: left;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.search input{
+  display: block;
+  background: url('https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/000/220/original/search.png?1510300432') no-repeat 3px 1px;
+  background-size:auto 90%; 
+  border: 1px solid #000;
+  padding: 5px 5px 5px 40px;
+  height: 15px;
+margin-left: auto;
+margin-right: 7%;
+}
+.search{
+
+  padding-top: 3%;
+}
+.content-books{
+  display: block;
+  margin-left: 10%;
 }
 
 .one img{
-    width: 150px;
-    height: 150px;
-    display: block;
-    float: left;
+  width: 120px;
+  height: 120px;
+  display: block;
+  float: left;
 }
 .one{
-    display: block;
-    padding-top:6%;
-    padding-right: 5%;
-    padding-left: 25%;
+  display: block;
+  padding-top:10%;
+  padding-right: 10%;
+  padding-left: 25%;
 }
 .one p{
-    margin: 0;
-    padding: 18px 0;
+  margin: 0;
+  padding: 18px 0;
 }
 
 .book img{
-    width: 150px;
-    height: 150px;
-    display: block;
-    float: left;
-}
-.book-img{
-  background:url(../bookig.png) no-repeat;
-  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  display: block;
+  float: left;
 }
 .book{
-    padding-right: 5%;
-    display: block;
-    padding-left: 25%;
-    padding-top: 5%;
+  padding-right: 5%;
+  display: block;
+  padding-left: 25%;
+  padding-top: 5%;
 }
 .book p{
-    margin: 0;
-    padding: 18px 0;
+  margin: 0;
+  padding: 18px 0;
 }
 .sylka{
-    padding-top: 10px;
+  padding-top: 10px;
 }
 .prewier{
-    padding-left:0;
+  padding-left:0; 
 }
 a{
-    padding: 10px;
-    text-decoration: none;
-    color: #000;
-    font-style: oblique;
-    font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  font-style: oblique;
+  font-weight: bold;
 }
 .rating_block {
-    width: 125px;
-    height: 25px;
-    float: left;
-  }
-  .rating_block input[type="radio"] {
-    display: none;
-  }
-  .label_rating {
-    float: right;
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: url(https://simplamarket.com/files/uploads/rating.png) no-repeat 50% 0;
-    cursor: pointer;
-  }
+  width: 125px;
+  height: 25px;
+  float: left;
+}
+.rating_block input[type="radio"] {
+  display: none;
+}
+.label_rating {
+  float: right;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url('https://simplamarket.com/files/uploads/rating.png') no-repeat 50% 0;
+  cursor: pointer;
+}
 
-  .rating_block .label_rating:hover,
-  .rating_block .label_rating:hover ~ .label_rating,
-  .rating_block input[type="radio"]:checked ~ .label_rating
-  {
-    background-position: 50% -25px;
-  }
+.rating_block .label_rating:hover,
+.rating_block .label_rating:hover ~ .label_rating,
+.rating_block input[type="radio"]:checked ~ .label_rating 
+{
+  background-position: 50% -25px;
+}
